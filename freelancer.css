@@ -1,0 +1,167 @@
+:root {
+  --bg-main: rgb(34, 34, 59);
+  --ui-main: rgb(74, 78, 105);
+  --ui-sub: rgb(154, 140, 152);
+  --ui-details: rgb(225, 140, 121);
+  --ui-sub-details: rgb(242, 233, 228);
+  --skeletone:rgb(255, 255, 225);
+  /* --bg-main: #070600;
+  --ui-main:#EA526F;
+  --ui-sub: #23B5D3;
+  --ui-details: #00589B;
+  --ui-sub-details: #F7F7FF; */
+  /* --bg-main: #074CB3;
+  --ui-main:#4ed3ff;
+  --ui-sub: #EA526F;
+  --ui-details: #ffc39b;
+  --ui-sub-details: #bbff00; */
+  /* #f2e096 */
+  /* --bg-main: #074CB3;
+  --ui-main:rgb(213, 255, 232);
+  --ui-sub:chartreuse;
+  --ui-details: #6C9FEB;
+  --ui-sub-details: #ffb300; */
+  --shadow-colors:rgb()
+  --navSpace: 5vh;
+  /* overflow-y: auto; */
+  scrollbar-color: var(--ui-sub-details), var(--ui-details);
+}
+body {
+  background-color: var(--bg-main);
+}
+#workers {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  align-content: stretch;
+  gap: 1rem;
+  background-color:  #ffffff17;
+  border: 0.25rem var(--ui-main) solid;
+  background-image: url(SpiderWeb.png);
+  background-size: 10%;
+
+}
+@media screen and (max-width: 900px) {
+    #workers{
+align-items: center; }
+}
+#nav-bar {
+  background-color: var(--ui-details);
+  padding-block: calc(var(--navSpace) / 2);
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  border-radius: 10% 30% / 55%;
+  z-index: 99;
+  /* color: aliceblue; */
+  :nth-child(1){
+    /* background-color: var(--ui-sub); */
+    stroke: 2px rgba(0,0,0,0.6);
+    -webkit-text-stroke:0.025rem var(--skeletone);
+    font-size: 3.5rem;
+    /* color: #000000; */
+    /* color: var(--skeletone); */
+    
+  }
+  :nth-child(2){
+    background-color: var(--bg-main);
+    stroke: 2px rgba(0,0,0,0.6);
+    -webkit-text-stroke:0.025rem var(--bg-main);
+    
+  }
+  :nth-child(2)::first-letter {
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    /* rotate: 40deg; */
+    background-color: var( --ui-main);
+    border-radius: 90% 25% / 55% 25%;
+
+    padding: 0.5% ;
+    padding-bottom: 1.4%;
+    -webkit-box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 0.1em var(--skeletone)  dashed;
+    border-width: 0.085em 0.045em;
+  }
+}
+#wrapper {
+    /* padding-top: calc(var(--navSpace) * 2); */
+  padding-top: 32.5%
+  /* margin-top: ; */
+  
+  /* display: flex; */
+  /* border-radius: 50% 25% /10% 96%; */
+  /* border-radius: 50% 25% /10% 96%; */
+}
+.freelancer {
+  background-color: var(--ui-main);
+  display: flex;
+  padding: 2.5%;
+  border-radius: 10% 30% / 55%;
+  /* border: 0.1em var(--skeletone)  dashed;
+  border-width: 0.1em 0.2em; */
+  div > div {
+    background-color: var(--ui-sub);
+    margin-left: 2.5%;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2.5%;
+    border-radius: 20% 51%/50%;
+    font-size: 1rem;
+    /* border: 0.1em var(--skeletone) dashed;
+    border-width: 0.1em 0.2em; */
+    ::first-letter {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: brown;
+      /* rotate: 40deg; */
+      background-color: var(--ui-details);
+      border-radius: 30% 96% / 50% 25%;
+      padding: 2.5%;
+    
+      /* border: 0.1em blue dashed; */
+    }
+  }
+}
+.freelancer > div > div:nth-child(even) {
+  border-radius: 17% 32% 92% 5%/50%;
+  ::first-letter {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: brown;
+    /* rotate: 40deg; */
+    background-color: var(--ui-sub-details);
+    border-radius: 50% 25% /10% 96%;
+    padding: 2.5%;
+    /* border: 0.1em blue dashed; */
+  }
+}
+.icon {
+  background-color: var(--ui-sub-details);
+  width: 38%;
+  height: inherit;
+  border-radius: 20% 222%/50% 69%;
+  clip-path: fill-box;
+}
+.shadowed {
+  -webkit-box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2.5px 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0px 2.5px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 0.1em var(--skeletone)  dashed;
+    border-width: 0.1em 0.2em;
+}
+.img {
+    width: 350px;
+    height: 350px;
+    clip-path: fill-box;
+}
